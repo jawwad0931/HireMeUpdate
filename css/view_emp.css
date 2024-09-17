@@ -1,0 +1,41 @@
+.property-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.property-item:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.property-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.status-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+.online {
+    background-color: #28a745;
+}
+
+.offline {
+    background-color: #dc3545;
+}
+
+
+/* size of header */
+
+/* .header img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+} */
