@@ -119,7 +119,7 @@ $mysqli->close();
         </div>
         <div class="counter-item">
             <div class="count-wrapper">
-                <h4 class="counterup text-primary d-inline-block">99</h4><span class="text-primary fs-3 fw-bolder">%</span>
+                <h4 class="counterup text-primary d-inline-block">95</h4><span class="text-primary fs-3 fw-bolder">%</span>
                 <p class="text-primary">Positive Review</p>
             </div>
         </div>

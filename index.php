@@ -80,10 +80,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include 'includes/header.php'; ?>
     <title>Login</title>
 </head>
-<body class="bg-white">
+<body class="bg-white" style="">
     <div class="container login-container">
         <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-md-12 col-lg-12 p-3 border">
+            <div class="col-md-6 col-lg-6 p-3">
                 <h2 class="text-center text-primary">Login</h2>
                 <?php if (!empty($login_err)) { ?>
                     <p class='text-danger text-center'><?php echo $login_err; ?></p>
@@ -101,6 +101,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p class="forgot-password mt-2 text-primary">Don't have an account? <a href="register.php"
                             class="text-primary text-decoration-underline">Create a new account now</a></p>
                 </form>
+               
+            </div>
+            <div class="col-6">
+                <img src="img/loginUser.jpg" height="350px" width="350px" alt="">
             </div>
         </div>
     </div>

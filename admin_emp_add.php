@@ -168,7 +168,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php if ($notice) echo $notice; ?>
 
 <form class="wow fadeIn" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-    <h2 class="text-primary">Add Further Yourself</h2>    
+    <h2 class="text-primary">Add Skills</h2>    
     <div class="form-group">
         <label for="skills">Skills:</label>
         <select id="skills" name="skills[]" class="form-control" required>
@@ -243,12 +243,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="col-lg-7 my-0 py-5">
         <!-- Important Note Alert Message -->
         <div class="alert alert-custom" role="alert">
+            <img src="img/add.jpg" height="300px" width="300px" alt="">
             <h4 class="alert-heading text-danger">Important Note</h4>
             <p class="text-danger  wow fadeInUp" data-wow-delay="0.1s">
                 Please review and manage your bookings carefully. You can accept or reject<br/> bookings based on your availability. 
                 Make sure to  update the status of each <br/> booking promptly to reflect accurate information.
             </p>
             <hr>
+            <img src="img/add_" alt="">
     <p class="mb-0 text-danger wow fadeIn">For any issues, please contact the support team.</p>
         </div>
         </div>

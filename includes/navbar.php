@@ -101,7 +101,7 @@
 
         <!-- Navbar Start -->
         <div class="container-fluid nav-bar py-0">
-            <nav class="navbar navbar-expand-lg bg-white py-1 px-4" style="height:70px !important">
+            <nav class="navbar navbar-expand-lg bg-white py-1 px-4" style="height:60px !important">
                 <a href="index.php" class="navbar-brand d-flex align-items-center text-center">
                     <div class="p-2 me-2">
                         <img class="img-fluid" src="img/logo.png" height="40px" width="40px" alt="Icon" style="">
@@ -117,7 +117,7 @@
                         <a href="view_emp.php" class="text-primary nav-item nav-link">Employees</a>
                         <a href="user_feedback.php" class="nav-item nav-link text-primary">Feedback</a>
                         <a href="bills_Record.php" class="nav-item nav-link text-primary">Bills</a>
-                        <a href="aboutus.php" class="nav-item nav-link text-primary">About Us</a>
+                        <a href="aboutus.php" class="nav-item nav-link text-primary">About</a>
                     </div>
                     <div class="nav-item dropdown text-primary">
                         <a href="#" class="nav-link dropdown-toggle text-primary" id="navbarDropdown" role="button"
@@ -294,24 +294,24 @@ $(document).ready(function () {
                                 Booking ID: {$row['booking_id']}
                             </div>
                             <div class='card-body'>
-                                <h5 class='card-title'>Status: {$status}</h5>
-                                <p class='card-text'>
-                                    <strong>Address:</strong> {$user_address}<br>
-                                    <strong>Timing:</strong> {$timing}<br>
-                                    <strong>Day:</strong> {$day}<br>
-                                    <strong>Your Description:</strong> {$description}<br>
-                                    <strong>Created At:</strong> {$formatted_date}<br><br>
-                                    <strong>Employee Details:</strong><br>
+                                <h5 class='card-title text-primary'>Status: {$status}</h5>
+                                <p class='card-text text-primary'>
+                                    <strong class='text-primary'>Address:</strong> {$user_address}<br>
+                                    <strong class='text-primary'>Timing:</strong> {$timing}<br>
+                                    <strong class='text-primary'>Day:</strong> {$day}<br>
+                                    <strong class='text-primary'>Your Description:</strong> {$description}<br>
+                                    <strong class='text-primary'>Created At:</strong> {$formatted_date}<br><br>
+                                    <strong class='text-primary'>Employee Details:</strong><br>
                                     <img src='{$employee_profileimage}' alt='Profile Image' class='img-thumbnail rounded-circle' style='width: 100px; height: 100px;'><br>
-                                    <strong>Name:</strong> {$employee_name}<br>
-                                    <strong>Contact:</strong> {$employee_contact}<br>
-                                    <strong>Skills:</strong> {$skills}<br>
-                                    <strong>City ID:</strong> {$city_id}<br>
-                                    <strong>Hourly Rate:</strong> {$amount}<br>
-                                    <strong>Status:</strong> {$employee_status}<br>
+                                    <strong class='text-primary'>Name:</strong> {$employee_name}<br>
+                                    <strong class='text-primary'>Contact:</strong> {$employee_contact}<br>
+                                    <strong class='text-primary'>Skills:</strong> {$skills}<br>
+                                    <strong class='text-primary'>City ID:</strong> {$city_id}<br>
+                                    <strong class='text-primary'>Hourly Rate:</strong> {$amount}<br>
+                                    <strong class='text-primary'>Status:</strong> {$employee_status}<br>
                                     </p>
                                     </div>
-                                    <div class='card-footer text-muted'>
+                                    <div class='card-footer text-primary'>
                                     Amount Charged: {$amount}
                                     </div>
                                     </div>";

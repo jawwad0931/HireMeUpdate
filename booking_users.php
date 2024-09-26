@@ -116,9 +116,18 @@ if ($result_bookings === false) {
     <!-- Important Note Alert Message -->
     <div class="alert alert-custom" role="alert">
         <h4 class="alert-heading wow fadeIn">Important Note</h4>
+        <p class="lead">Please review and manage your bookings carefully.</p>
+        <p class="lead wow fadeIn">
+            You can update the status of each booking based on your needs. Make sure to manage your bookings promptly and efficiently.
+        </p>
         <p class="wow fadeIn">
-            Please review and manage your bookings carefully. You can update the status of each booking based on your needs. 
-            Make sure to manage your bookings promptly.
+            Regularly reviewing your bookings will help ensure smooth operations and allow you to meet client expectations. Always keep your availability and booking details up-to-date to avoid any conflicts or delays.
+        </p>
+        <p class="wow fadeIn">
+            If there are any issues or changes required for a booking, take immediate action to either reschedule, update the booking status, or contact the client directly.
+        </p>
+        <p class="wow fadeIn">
+            Your commitment to timely and accurate management of bookings will contribute to a successful experience for both you and your clients. Thank you for your dedication.
         </p>
         <hr>
         <p class="mb-0 wow fadeIn">For any issues, please contact the support team.</p>

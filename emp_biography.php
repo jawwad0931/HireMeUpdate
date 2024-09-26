@@ -34,7 +34,7 @@ if (isset($_GET['employee_id'])) {
 
         <!-- Display employee details in a Bootstrap card -->
         <div class="container mt-5">
-            <div class="row justify-content-center align-items-center">
+            <div class="row justify-content-start align-items-center">
                 <div class="col-md-6 text-start wow fadeInUp" data-wow-delay="0.1s">
                     <img src="<?php echo $employee['img']; ?>" alt="Profile Image" class="img-fluid rounded" style="height: 400px; width: auto;">
                 </div>
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p class="text-primary">Reviewing as: <?php echo $user_name; ?></p>
 
         <div class="form-group">
-            <label for="rating" class="text-primary">Rating:</label>
+            <label for="rating" class="text-danger">Rating</label>
             <div id="starRating" class="">
                 <?php for ($i = 1; $i <= 5; $i++): ?>
                     <span class="star" data-value="<?php echo $i; ?>">&star;</span>

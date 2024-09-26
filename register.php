@@ -4,7 +4,8 @@ include 'config/db_connection.php';
 include 'includes/header.php';
 
 // Function to sanitize and validate input
-function clean_input($data) {
+function clean_input($data)
+{
     return htmlspecialchars(stripslashes(trim($data)));
 }
 
@@ -121,115 +122,143 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- =========================html start ========================= -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>User Registration</title>
 </head>
 <style>
     .custom-file-upload {
-            background-color: #f8f9fa;
-            border: 2px dashed #00B98E;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        .custom-file-upload:hover {
-            background-color: #e9ecef;
-            border-color: #00A078;
-        }
-        .form-label {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #007BFF;
-        }
+        background-color: #f8f9fa;
+        border: 2px dashed #00B98E;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .custom-file-upload:hover {
+        background-color: #e9ecef;
+        border-color: #00A078;
+    }
+
+    .form-label {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #007BFF;
+    }
 </style>
+
 <body class="bg-white">
     <div class="container">
-        <div class="form-container px-3 py-3 border rounded-0">
-            <h2 class="mb-1 text-primary text-start">Registration</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="py-3" enctype="multipart/form-data">
-                <div class="row">
-                    <div class="col-6">
-                    <div class="mb-1">
-                    <label for="username" class="form-label text-primary fs-6">Username</label>
-                    <input type="text" id="username" name="username" class="form-control" value="<?php echo $username; ?>" required>
-                    <span class="text-danger"><?php echo $username_err; ?></span>
-                </div>  
-                    </div>
-                    <div class="col-6">
-                    <div class="mb-1">
-                    <label for="email" class="form-label text-primary fs-6">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" value="<?php echo $email; ?>" required>
-                    <span class="text-danger"><?php echo $email_err; ?></span>
+        <div class="row d-flex">
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="">
+                    <img src="img/register.svg" height="400px" width="400px">
                 </div>
-                    </div>
-                </div>
+            </div>
+            <div class="col-8 d-flex justify-content-start align-items-center">
+                <div class="form-container px-3 py-3 rounded-0">
+                    <h2 class="mb-1 text-primary text-start">Registration</h2>
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="py-3"
+                        enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-1">
+                                    <label for="username" class="form-label text-primary fs-6">Username</label>
+                                    <input type="text" id="username" name="username" class="form-control"
+                                        value="<?php echo $username; ?>" required>
+                                    <span class="text-danger"><?php echo $username_err; ?></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-1">
+                                    <label for="email" class="form-label text-primary fs-6">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        value="<?php echo $email; ?>" required>
+                                    <span class="text-danger"><?php echo $email_err; ?></span>
+                                </div>
+                            </div>
+                        </div>
 
 
-                <div class="row">
-                    <div class="col-6">
-                    <div class="mb-1">
-                    <label for="password" class="form-label text-primary fs-6">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" required>
-                    <span class="text-danger"><?php echo $password_err; ?></span>
-                </div>
-                    </div>
-                    <div class="col-6">
-                    <div class="mb-1">
-                    <label for="age" class="form-label text-primary fs-6">Age</label>
-                    <input type="number" id="age" name="age" class="form-control" value="<?php echo $age; ?>" required>
-                    <span class="text-danger"><?php echo $age_err; ?></span>
-                </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                    <div class="mb-1">
-                    <label for="contact" class="form-label text-primary fs-6">Contact</label>
-                    <input type="text" id="contact" name="contact" class="form-control" value="<?php echo $contact; ?>" required>
-                    <span class="text-danger"><?php echo $contact_err; ?></span>
-                </div>
-                    </div>
-                    <div class="col-6">
-                    <div class="mb-1">
-                    <label for="role" class="form-label text-primary fs-6">Role</label>
-                    <select id="role" name="role" class="form-select" required>
-                        <option value="">Select Role</option>
-                        <option value="user" <?php if ($role == 'user') echo 'selected'; ?>>User</option>
-                        <option value="employee" <?php if ($role == 'employee') echo 'selected'; ?>>Employee</option>
-                        <option value="admin" <?php if ($role == 'admin') echo 'selected'; ?>>Admin</option>
-                    </select>
-                    <span class="text-danger"><?php echo $role_err; ?></span>
-                </div>
-                    </div>
-                </div>
-             
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-1">
+                                    <label for="password" class="form-label text-primary fs-6">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" required>
+                                    <span class="text-danger"><?php echo $password_err; ?></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-1">
+                                    <label for="age" class="form-label text-primary fs-6">Age</label>
+                                    <input type="number" id="age" name="age" class="form-control"
+                                        value="<?php echo $age; ?>" required>
+                                    <span class="text-danger"><?php echo $age_err; ?></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-1">
+                                    <label for="contact" class="form-label text-primary fs-6">Contact</label>
+                                    <input type="text" id="contact" name="contact" class="form-control"
+                                        value="<?php echo $contact; ?>" required>
+                                    <span class="text-danger"><?php echo $contact_err; ?></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-1">
+                                    <label for="role" class="form-label text-primary fs-6">Role</label>
+                                    <select id="role" name="role" class="form-select" required>
+                                        <option value="">Select Role</option>
+                                        <option value="user" <?php if ($role == 'user')
+                                            echo 'selected'; ?>>User</option>
+                                        <option value="employee" <?php if ($role == 'employee')
+                                            echo 'selected'; ?>>
+                                            Employee</option>
+                                        <option value="admin" <?php if ($role == 'admin')
+                                            echo 'selected'; ?>>Admin
+                                        </option>
+                                    </select>
+                                    <span class="text-danger"><?php echo $role_err; ?></span>
+                                </div>
+                            </div>
+                        </div>
 
-            
 
-                <!-- <div class="mb-1">
+
+
+                        <!-- <div class="mb-1">
                     <label for="profile_picture" class="form-label text-primary">Profile Picture</label>
                     <input type="file" id="profile_picture" name="profile_picture" class="form-control">
                 </div> -->
 
-                <div class="mb-1 custom-file-upload mt-2">
-                    <label for="profile_picture" class="form-label text-primary fs-6 fw-light">Profile Picture</label>
-                    <input type="file" id="profile_picture" name="profile_picture" class="form-control" style="border: none; box-shadow: none;">
-                </div>
+                        <label for="profile_picture" class="form-label text-primary fs-6 fw-bold text-left">Profile
+                            Picture</label>
+                        <div class="mb-1 custom-file-upload mt-2">
+                            <input type="file" id="profile_picture" name="profile_picture" class="form-control"
+                                style="border: none; box-shadow: none;">
+                        </div>
 
-                <div class="mb-1 mt-1 form-check">
-                    <input type="checkbox" id="terms_accepted" name="terms_accepted" class="form-check-input" value="1" <?php if ($terms_accepted) echo 'checked'; ?> required>
-                    <label for="terms_accepted" class="form-check-label text-primary">Accept Terms</label>
-                    <span class="text-danger"><?php echo $terms_accepted_err; ?></span>
-                </div>
+                        <div class="mb-1 mt-1 form-check">
+                            <input type="checkbox" id="terms_accepted" name="terms_accepted" class="form-check-input"
+                                value="1" <?php if ($terms_accepted)
+                                    echo 'checked'; ?> required>
+                            <label for="terms_accepted" class="form-check-label text-primary">Accept Terms</label>
+                            <span class="text-danger"><?php echo $terms_accepted_err; ?></span>
+                        </div>
 
-                <button type="submit" class="btn btn-primary btn-sm w-25 text-white">Register</button><br />
-                <a href="index.php" class="text-decoration-underline">Have an account lets login</a>
-            </form>
+                        <button type="submit" class="btn btn-primary btn-sm w-25 text-white">Register</button><br />
+                        <a href="index.php" class="text-decoration-underline">Have an account lets login</a>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
 <!-- ========================html end ========================= -->

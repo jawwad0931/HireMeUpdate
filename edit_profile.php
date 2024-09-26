@@ -155,6 +155,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="javascript:void(0);" onclick="confirmDelete()" class="btn btn-danger btn-sm px-3 text-white">Delete Profile</a>
         </form>
             </div>
+            <div class="col-lg-6 d-flex justify-content-center">
+                <img src="img/profile.png" height="400px" width="400px" class=""   alt="">
+            </div>
         </div>
     </div>
      <!-- JavaScript Libraries -->

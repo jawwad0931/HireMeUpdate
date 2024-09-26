@@ -130,7 +130,7 @@ if ($_SESSION['role'] !== 'user') {
                     </nav>
                 </div>
                 <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/about-us.png" alt="">
+                    <img class="img-fluid" src="img/about-us.png" height="500px" width="500px" alt="">
                 </div>
             </div>
         </div>
@@ -157,8 +157,7 @@ if ($_SESSION['role'] !== 'user') {
     </div>
     <div class="container goal">
         <section class="goals  wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="text-white">Our Vision and Goals</h1>
-            <h2 class="text-light">Our Goals</h2>
+            <h1 class="text-white my-5">Our Vision and Goals</h1>
             <ul>
                 <li>
                     <h3>Expand Our Network</h3>

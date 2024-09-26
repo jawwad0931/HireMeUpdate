@@ -120,8 +120,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['booking_id']) && isset
         }
 
         .labour_image {
-            background-image: url('img/removeBg.png');
-            height: 650px !important;
+            background-image: url('img/invoice.jpg');
+            height: 500px !important;
             width: 100%;
             background-size: contain;
             background-repeat: no-repeat;
@@ -130,6 +130,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['booking_id']) && isset
         .labour_desc {
             font-family: 'Poppins', Arial, Helvetica, sans-serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .card:hover{
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            transition: 0.2s;
         }
     </style>
 </head>
@@ -232,7 +237,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['booking_id']) && isset
 
 <!-- ------------------------------------------------------------------------------------------------------------- -->
 
-                        <div class="col-3">
+                        <div class="col-6">
                             <div class="form-group">
                                 <label for="booking_id">Booking Id:</label>
                                 <select id="booking_id" name="booking_id" class="form-control" required>
@@ -277,11 +282,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['booking_id']) && isset
                 <hr />                         
 
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <div class="labour_image">
                     <h2 class="labour_desc text-danger">Find</h2>
                     <h2 class="labour_desc text-info">Best</h2>
-                    <h2 class="labour_desc text-success">Labour</h2>
+                    <h2 class="labour_desc text-success">Employee</h2>
                     <h2 class="labour_desc text-warning">In</h2>
                     <h2 class="labour_desc text-secondary">Youself</h2>
                 </div>

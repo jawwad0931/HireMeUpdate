@@ -82,7 +82,7 @@ $result = $mysqli->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         ?>
-                        <div class="testimonial-item rounded p-3 w-100" style="border: 1px dashed green">
+                        <div class="testimonial-item rounded p-3 w-100" style="">
                             <div class="p-4">
                                 <p><?php echo htmlspecialchars($row['comment']); ?></p>
                                 <div class="d-flex align-items-center">

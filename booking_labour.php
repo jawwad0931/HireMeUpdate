@@ -180,10 +180,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="bg-white">
     <div class="container-xxl py-5">
         <div class="container">
+            <div class="row">
+                <div class="col-12 wow fadeIn">
+                    <h4 class="text-danger wow fadeIn">Kindly Remember</h4>
+                    <p class="text-danger wow fadeIn">If you will hire employee so You will be notified as soon as the employee accepts or declines the service.</p>
+                    <p class="text-danger wow fadeIn">This service is only available for registered users.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="img/book banner.jpg" alt="Book Banner">
+                        <img class="" src="img/mechanic.jpg" height="500px" width="550px" alt="Book Banner">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

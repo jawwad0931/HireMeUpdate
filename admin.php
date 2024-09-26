@@ -33,9 +33,9 @@ include('Admin-includes/topbar.php');
 <html lang="en">
 <head>
     <!-- dobara redirect se bachne ke liye lagaya gaya hai -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     window.history.forward();
-    </script>
+    </script> -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HireMe</title>

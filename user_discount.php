@@ -43,6 +43,23 @@ $mysqli->close();
 <body class="bg-white">
     <?php include 'includes/navbar.php'; ?>
     <div class="container my-5 py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="px-4">
+                <h3 class="display-5 animated fadeIn mb-4 text-danger">Discounts</h3>
+                <h4 class="text-primary">Important Notice: Exclusive Discount Alert!</h4>
+                <p class="text-primary">We are offering limited-time discounts for customers who pay their bills online!</p>
+                <p class="text-primary">Don't miss out on this opportunity to save!</p>
+                <p class="text-primary">Pay online and enjoy instant savings on your next payment.</p>
+                <p class="text-primary">Act fast—this offer won't last long!</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h1 class="display-5 animated fadeIn mb-4 text-primary">
+                    <img src="img/dis.jpg" height="300px" width="300px" alt="">
+                </h1>
+            </div>
+        </div>
         <div class="row ml-3">
             <div class="alert alert-custom w-75 mx-4" role="alert">
                 <h4 class="alert-heading text-danger">Important Note</h4>
@@ -50,7 +67,7 @@ $mysqli->close();
                     We want to inform you that the discount offer that was previously available has now ended.<br /> Unfortunately, this means that the discount can no longer be applied to any new purchases.
                 </p>
                 <hr>
-            <p class="mb-0 text-danger wow fadeIn">For any issues,<a href="user_feedback.php" class="text-danger text-decoration-underline">please contact the support team</a>.</p>
+                <p class="mb-0 text-danger wow fadeIn">For any issues,<a href="user_feedback.php" class="text-danger text-decoration-underline">please contact the support team</a>.</p>
             </div>
             <?php while ($row = $result->fetch_assoc()): ?>
                 <div class="col-md-6 col-lg-6 col-sm-12 mb-4">

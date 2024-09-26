@@ -56,14 +56,27 @@ $logged_in_user_id = $_SESSION['id'];
                         </ol>
                     </nav>
                 </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/invoice.png" height="" width="" alt="">
+                <div class="col-md-6 d-flex justify-content-center animated fadeIn">
+                    <img class="img-fluid" src="img/billss.jpg" height="400px" width="400px" alt="">
                 </div>
             </div>
+    </div>
+    <!-- Header End -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-primary">Get Rewarded for Paying Online!</h4>
+                <p class="text-primary">Save more when you pay your bills online!</p>
+                <p class="text-primary">Enjoy a special discount as our way of saying thank you for choosing a faster, easier payment method.</p>
+                <p class="text-primary">Pay online and start saving today!</p>
+            </div>
         </div>
-        <!-- Header End -->
+    </div>
+
+
     <div class="container mt-5">
-        <h1 class="text-primary">Employee Work Details</h1>
+        <h4 class="text-primary">Employee Work Details</h4>
         <table class="table wow fadeIn"  data-wow-delay="0.1s"> 
             <thead>
                 <tr>
@@ -127,7 +140,7 @@ $logged_in_user_id = $_SESSION['id'];
                                 <?php endif; ?>
                             </td>
                             <!-- <td><a href="payment.php?id=<?php echo htmlspecialchars($row['id']); ?>" class="btn btn-sm btn-primary">Pay</a></td> -->
-                            <td><a href="apply_discount.php?id=<?php echo htmlspecialchars($row['id']); ?>" class="discount btn btn-primary btn-sm w-100">Apply Disc</a></td>
+                            <td><a href="apply_discount.php?id=<?php echo htmlspecialchars($row['id']); ?>" class="discount btn btn-outline-primary  btn-sm w-100">Apply Disc</a></td>
                         </tr>
             <?php 
                     endwhile; 
@@ -140,6 +153,8 @@ $logged_in_user_id = $_SESSION['id'];
             </tbody>
         </table>
     </div>
+
+
     <?php
     include 'includes/footer.php'; 
     ?>

@@ -15,9 +15,9 @@ unset($_SESSION['message']);
 <html lang="en">
 <head>
     <!-- dobara redirect se bachne ke liye lagaya gaya hai -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     window.history.forward();
-    </script>
+    </script> -->
     <?php
     include 'includes/header.php';
     ?>
@@ -55,9 +55,9 @@ unset($_SESSION['message']);
                     Your Doorstep</h1>
                 <p class="animated fadeIn mb-4 pb-2">Are you tired of dealing with endless home repairs and maintenance
                     tasks?
-                    Look no further! As a dedicated and skilled home maintenance professional, I am here to provide
+                    Look no further! As a dedicated and skilled home maintenance professional,<br> I am here to provide
                     top-quality services right at your doorstep.</p>
-                <a href="view_emp.php" class="btn btn-primary btn-sm px-5 me-3 animated fadeIn text-white">Book Now</a>
+                <a href="view_emp.php" class="btn btn-outline-primary btn-sm px-5 me-3 animated fadeIn">Hire Now</a>
             </div>
             <div class="col-md-6 mt-lg-6 animated fadeIn">
                 <div class="owl-carousel header-carousel">

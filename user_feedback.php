@@ -55,8 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </ol>
                     </nav>
                 </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/emp-feeds.png" alt="">
+                <div class="col-md-6 d-flex justify-content-center animated fadeIn">
+                    <img class="img-fluid" src="img/feedi.jpg" height="400px" width="400px" alt="">
                 </div>
             </div>
         </div>

@@ -42,9 +42,9 @@ $mysqli->close();
 
 <head>
     <!-- dobara redirect se bachne ke liye lagaya gaya hai -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     window.history.forward();
-    </script>
+    </script> -->
     <?php include 'includes/header.php'; ?>
 </head>
 <style>
@@ -69,12 +69,12 @@ $mysqli->close();
             overflow: clip;
             display: flex;
             flex-direction: column;
-            background-image: url("img/labourBg.jpg");
-            background-position: bottom;
+            background-image: url("img/labourBack.jpg");
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             outline: 1px solid #FFFFFF70;
-            outline-offset: 4px;
+            outline-offset: 0px;
             margin: auto;
             border: 1px dashed black;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -310,42 +310,54 @@ $mysqli->close();
             $result = $mysqli->query($sql);
             ?>
             <div class="container py-1 px-3">
-                <h1 class="mb-4 text-center text-primary">Reviews</h1>
-                <div class="row wow fadeIn">
-                    <?php
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $comment = htmlspecialchars($row['comment']);
-                            $created_at = htmlspecialchars($row['created_at']);
-                            $username = htmlspecialchars($row['username']);
-                            $profileimage = htmlspecialchars($row['profileimage']);
+            <h1 class="mb-4 text-center text-primary">Reviews</h1>
+            <div class="row wow fadeIn">
+                <?php
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $comment = htmlspecialchars($row['comment']);
+                        $created_at = htmlspecialchars($row['created_at']);
+                        $username = htmlspecialchars($row['username']);
+                        $profileimage = htmlspecialchars($row['profileimage']);
 
-                            echo '<div class="col-md-3">';
-                            echo '    <div class="review-card my-5 border" style="height:250px;">';
-                            echo '        <div class="card-body text-center">'; // Center text inside the card body
-                            echo '            <div class="mb-3">';
-                            // echo '                <div class="d-flex align-items-center justify-content-center">';
-                            // echo '                    <img src="' . $profileimage . '" alt="Profile Image" class="rounded-circle" style="width: 100px; height: 100px;">';
-                            // echo '                </div>';
-                            echo '                <div class="pt-3 d-flex justify-content-center">';
-                            echo '                    <h5 class="card-title mb-0">' . $username . '</h5>';
-                            echo '                </div>';
-                            echo '                <div class="pt-3 d-flex justify-content-center">';
-                            echo '                    <small class="text-muted">' . $created_at . '</small>';
-                            echo '                </div>';
-                            echo '            </div>';
-                            echo '            <p class="card-text text-center">' . $comment . '</p>';
-                            echo '        </div>';
-                            echo '    </div>';
-                            echo '</div>';
-
-                        }
-                    } else {
-                        echo '<div class="col-12">No reviews found.</div>';
+                        echo '<div class="col-md-3">';
+                        echo '    <div class="review-card my-5 border rounded-50 overflow-hidden hover-effect">'; // Added rounded-50 and hover-effect
+                        echo '        <div class="card-body text-center">';
+                        echo '            <div class="mb-3">';
+                        echo '                <div class="pt-3 d-flex justify-content-center">';
+                        echo '                    <h5 class="card-title mb-0 text-primary">' . $username . '</h5>';
+                        echo '                </div>';
+                        echo '                <div class="pt-3 d-flex justify-content-center">';
+                        echo '                    <small class="text-primary">' . $created_at . '</small>';
+                        echo '                </div>';
+                        echo '            </div>';
+                        echo '            <p class="card-text text-center text-primary">' . $comment . '</p>';
+                        echo '        </div>';
+                        echo '    </div>';
+                        echo '</div>';
                     }
-                    ?>
-                </div>
+                } else {
+                    echo '<div class="col-12">No reviews found.</div>';
+                }
+                ?>
             </div>
+        </div>
+
+        <style>
+            .review-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-radius: 5%; 
+                overflow: hidden; 
+                height: 300px;
+            }
+
+            .review-card:hover {
+                transform: scale(1.05); 
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+                backdrop-filter: blur(5px); 
+                z-index: 1; 
+            }
+        </style>
             <!-- ==================================== Reviews end ======================================= -->        
 
             <!-- ================================== Here footer start =======================================-->
